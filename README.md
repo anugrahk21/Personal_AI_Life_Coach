@@ -34,7 +34,6 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
   </a>
 </div>
 
-*Note: You need to add your landing page demo video to `static/assets/videos/landing-page-demo.mp4`*
 
 ### Live AI Working Demo
 <div align="center">
@@ -43,7 +42,6 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
   </a>
 </div>
 
-*Note: You need to add your live working demo video to `static/assets/videos/live-working-demo.mp4`*
 
 ## 💻 Technology Stack
 
