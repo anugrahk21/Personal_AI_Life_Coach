@@ -27,30 +27,33 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 
 ## 📸 Screenshots & Demos
 
-### Landing Page Demo
-
-[![Landing Page Demo](https://img.shields.io/badge/Watch-Landing%20Page%20Demo-blue?style=for-the-badge&logo=github)](https://github.com/anugrahk21/Personal_AI_Life_Coach/blob/main/static/assets/videos/landing-page-demo.mp4)
-
-*Click the button above to view the landing page demo video*
-
-### Live Working Demo
-
-[![Live Working Demo](https://img.shields.io/badge/Watch-Live%20Working%20Demo-green?style=for-the-badge&logo=github)](https://github.com/anugrahk21/Personal_AI_Life_Coach/blob/main/static/assets/videos/live-working-demo.mp4)
-
-*Click the button above to view the live working demo video*
-
-Alternative: You can also download and view these videos directly:
-- [Download Landing Page Demo](https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/landing-page-demo.mp4)
-- [Download Live Working Demo](https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/live-working-demo.mp4)
-
-#### Video Thumbnails
+### Application Screenshots
 
 <div align="center">
-  <img src="./static/assets/videos/landing-page-thumbnail.jpg" alt="Landing Page Demo Thumbnail" width="45%">
-  <img src="./static/assets/videos/live-working-thumbnail.jpg" alt="Live Working Demo Thumbnail" width="45%">
+  <h4>Landing Page</h4>
+  <img src="./static/assets/img/screenshots/landing-page-screenshot1.png" alt="Landing Page Screenshot 1" width="45%" style="margin-right: 10px; margin-bottom: 10px;">
+  <img src="./static/assets/img/screenshots/landing-page-screenshot2.png" alt="Landing Page Screenshot 2" width="45%" style="margin-bottom: 10px;">
+  <img src="./static/assets/img/screenshots/landing-page-screenshot3.png" alt="Landing Page Screenshot 3" width="45%" style="margin-right: 10px; margin-bottom: 10px;">
+  <img src="./static/assets/img/screenshots/landing-page-screenshot4.png" alt="Landing Page Screenshot 4" width="45%" style="margin-bottom: 10px;">
+  
+  <h4>AI  Interface</h4>
+  <img src="./static/assets/img/screenshots/live-working-screenshot.png" alt="Live Working Screenshot" width="90%">
 </div>
 
-*Note: You'll need to add thumbnail images for your videos in the same directory*
+### Demo Videos
+
+<div align="center">
+  <h4>Download and View Demo Videos</h4>
+  <a href="https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/landing-page-demo.mp4">
+    <img src="https://img.shields.io/badge/Download-Landing%20Page%20Demo-blue?style=for-the-badge&logo=github" alt="Download Landing Page Demo">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/live-working-demo.mp4">
+    <img src="https://img.shields.io/badge/Download-Live%20Working%20Demo-green?style=for-the-badge&logo=github" alt="Download Live Working Demo">
+  </a>
+</div>
+
+*Note: Click the buttons above to download and view the demo videos locally on your device*
 
 ## 💻 Technology Stack
 
