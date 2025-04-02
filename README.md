@@ -100,7 +100,42 @@ Note: The port may vary depending on your system configuration or if port 5000 i
 
 ## ⚙️ How It Works
 
-[Detailed explanation of the AI's functionality will be added here]
+### AI Implementation
+
+This project transforms Google's Gemini 2.0 Flash model into a compassionate, motivational life coach through careful system design and prompt engineering.
+
+#### Therapeutic Personality Design
+
+The AI coach's personality has been meticulously crafted by providing specific instructions that shape how it responds:
+
+- **Empathetic First Approach**: The system is programmed to always validate emotions before offering guidance, creating a supportive experience similar to human therapeutic interactions.
+
+- **Conversational Memory**: The coach maintains conversation history to provide contextually relevant responses that reference previous discussions, creating a coherent coaching experience.
+
+- **Carefully Structured Responses**: All AI outputs are formatted with:
+  - Short, digestible paragraphs (2-3 sentences maximum)
+  - Strategic use of line breaks for readability
+  - Bullet points for actionable suggestions
+  - Appropriate emotional tone markers (emojis) used sparingly
+
+- **Motivational Framework**: The coach incorporates positive psychology principles, focusing on strengths and growth potential rather than just problem-solving.
+
+#### Technical Implementation
+
+The core coaching capabilities are implemented in the `TherapistCoach` class within `coach.py`:
+
+1. **System Instruction**: A comprehensive prompt establishes the coach's personality, communication style, and therapeutic approach.
+
+2. **Context Management**: The system tracks conversation history and session duration to provide personalized responses.
+
+3. **Response Enhancement**:
+   - Therapeutic openers ensure responses begin with empathetic acknowledgment
+   - Periodic integration of motivational quotes to inspire and encourage
+   - Fallback mechanisms for graceful handling of API issues
+
+4. **Web Integration**: The Flask application in `app.py` serves as the interface between the user and the AI coach, handling request processing and response formatting.
+
+The custom prompt engineering ensures the Gemini model behaves consistently as a life coach rather than a general information system, focusing on emotional support, personal growth, and actionable guidance.
 
 ## 📁 Project Structure
 
@@ -110,9 +145,13 @@ AI_Personal_Life_Coach/
 ├── coach.py              # TherapistCoach implementation
 ├── requirements.txt      # Python dependencies
 ├── static/               # Static assets
+│   ├── assets/           # Images, videos and resources
+│   │   ├── favicon/      # Favicon files
+│   │   ├── img/          # Image resources and screenshots
+│   │   └── videos/       # Demo videos
+│   ├── controller/       # JavaScript controllers
 │   ├── css/              # Stylesheets
-│   ├── js/               # JavaScript files
-│   └── assets/           # Images, videos and other assets
+│   └── js/               # JavaScript files
 └── templates/            # HTML templates
     ├── index.html        # Landing page
     └── coachai.html      # Coach interface
@@ -144,7 +183,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Google for providing the Gemini AI capabilities
 - Flask team for the web framework
-- Bootstrap for the responsive design components
+- HTML5, CSS3, and JavaScript for frontend development
 
 ## 📬 Contact
 
