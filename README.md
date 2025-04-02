@@ -28,20 +28,29 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 ## 📸 Screenshots & Demos
 
 ### Landing Page Demo
-<div align="center">
-  <video width="100%" controls>
-    <source src="./static/assets/videos/landing-page-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+
+[![Landing Page Demo](https://img.shields.io/badge/Watch-Landing%20Page%20Demo-blue?style=for-the-badge&logo=github)](https://github.com/anugrahk21/Personal_AI_Life_Coach/blob/main/static/assets/videos/landing-page-demo.mp4)
+
+*Click the button above to view the landing page demo video*
 
 ### Live Working Demo
+
+[![Live Working Demo](https://img.shields.io/badge/Watch-Live%20Working%20Demo-green?style=for-the-badge&logo=github)](https://github.com/anugrahk21/Personal_AI_Life_Coach/blob/main/static/assets/videos/live-working-demo.mp4)
+
+*Click the button above to view the live working demo video*
+
+Alternative: You can also download and view these videos directly:
+- [Download Landing Page Demo](https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/landing-page-demo.mp4)
+- [Download Live Working Demo](https://github.com/anugrahk21/Personal_AI_Life_Coach/raw/main/static/assets/videos/live-working-demo.mp4)
+
+#### Video Thumbnails
+
 <div align="center">
-  <video width="100%" controls>
-    <source src="./static/assets/videos/live-working-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="./static/assets/videos/landing-page-thumbnail.jpg" alt="Landing Page Demo Thumbnail" width="45%">
+  <img src="./static/assets/videos/live-working-thumbnail.jpg" alt="Live Working Demo Thumbnail" width="45%">
 </div>
+
+*Note: You'll need to add thumbnail images for your videos in the same directory*
 
 ## 💻 Technology Stack
 
