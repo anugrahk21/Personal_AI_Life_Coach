@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 3. Set up your Gemini API key:
    - Create a `.env` file in the root directory
-   - Add your API key: `GEMINI_API_KEY=your_api_key_here`
+   - Add your API key: `GEMINI_API_KEY=YOUR GOOGLE GEMINI 2.0 FLASH API`
    - You can get an API key from: https://makersuite.google.com/app/apikey
 
 4. Run the application:
