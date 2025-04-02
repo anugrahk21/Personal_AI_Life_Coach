@@ -25,6 +25,24 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 - **24/7 Availability** ⏰: Support whenever you need it, day or night
 - **Private & Secure** 🔒: Your conversations remain confidential
 
+## 📸 Screenshots & Demos
+
+### Landing Page Demo
+<div align="center">
+  <video width="100%" controls>
+    <source src="./static/assets/videos/landing-page-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+### Live Working Demo
+<div align="center">
+  <video width="100%" controls>
+    <source src="./static/assets/videos/live-working-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 ## 💻 Technology Stack
 
 - **Backend**: Python, Flask
@@ -68,10 +86,6 @@ Note: The port may vary depending on your system configuration or if port 5000 i
 3. Receive personalized guidance and support
 4. Continue the conversation to explore topics in depth
 
-## 📸 Screenshots
-
-[Screenshots of the application interface will be added here]
-
 ## ⚙️ How It Works
 
 [Detailed explanation of the AI's functionality will be added here]
@@ -86,7 +100,7 @@ AI_Personal_Life_Coach/
 ├── static/               # Static assets
 │   ├── css/              # Stylesheets
 │   ├── js/               # JavaScript files
-│   └── assets/           # Images and other assets
+│   └── assets/           # Images, videos and other assets
 └── templates/            # HTML templates
     ├── index.html        # Landing page
     └── coachai.html      # Coach interface
