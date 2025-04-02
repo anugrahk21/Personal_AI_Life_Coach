@@ -14,7 +14,7 @@ AI Personal Life Coach leverages artificial intelligence to create a supportive,
 - [Technology Stack](#-technology-stack)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [How It Works](#-how-it-works)
+- [How It Works](#️-how-it-works)
 - [Project Structure](#-project-structure)
 - [Contributing](#-contributing)
 - [Future Enhancements](#-future-enhancements)
