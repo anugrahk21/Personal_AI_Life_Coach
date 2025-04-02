@@ -29,19 +29,19 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 
 ### Landing Page Demo
 <div align="center">
-  <a href="./static/assets/videos/landing-page-demo.mp4">
-    <img src="https://img.shields.io/badge/Watch-Landing%20Page%20Demo-blue?style=for-the-badge&logo=video" alt="Watch Landing Page Demo">
-  </a>
+  <video width="100%" controls>
+    <source src="./static/assets/videos/landing-page-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
-
-### Live AI Working Demo
+### Live Working Demo
 <div align="center">
-  <a href="./static/assets/videos/live-working-demo.mp4">
-    <img src="https://img.shields.io/badge/Watch-Live%20Working%20Demo-green?style=for-the-badge&logo=video" alt="Watch Live Working Demo">
-  </a>
+  <video width="100%" controls>
+    <source src="./static/assets/videos/live-working-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
-
 
 ## 💻 Technology Stack
 
@@ -100,7 +100,7 @@ AI_Personal_Life_Coach/
 ├── static/               # Static assets
 │   ├── css/              # Stylesheets
 │   ├── js/               # JavaScript files
-│   └── assets/           # Images and other assets
+│   └── assets/           # Images, videos and other assets
 └── templates/            # HTML templates
     ├── index.html        # Landing page
     └── coachai.html      # Coach interface
