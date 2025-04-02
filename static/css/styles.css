@@ -1,0 +1,303 @@
+/* Custom styles for chat application */
+
+/* Gradient text for headings */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Fixed height chat container with proper scrolling */
+#chat-messages {
+    height: 60vh;
+    max-height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+/* Auto-scroll to bottom when new messages are added */
+.scroll-bottom {
+    margin-top: auto;
+}
+
+/* Message wrapper with profile icons */
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.message-wrapper.user-message-wrapper {
+    flex-direction: row-reverse;
+}
+
+/* Profile icon styles */
+.profile-icon {
+    flex-shrink: 0;
+}
+
+.profile-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.user-message-wrapper .profile-circle {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.coach-message-wrapper .profile-circle {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+/* Chat bubbles for messages */
+.message {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: calc(80% - 44px); /* Accounting for profile icon width */
+    word-wrap: break-word;
+    position: relative;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.coach-message {
+    background: #f3f4f6;
+    color: #1f2937;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.dark .coach-message {
+    background: #374151;
+    color: #e5e7eb;
+}
+
+/* Message timestamp */
+.message-time {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-top: 4px;
+    text-align: right;
+}
+
+/* Typing animation */
+#typing-indicator {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: none;
+}
+
+#typing-indicator.d-none {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+}
+
+.typing-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 20px;
+    padding: 0 4px;
+}
+
+.typing-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    opacity: 0.6;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes typing-dot {
+    0%, 80%, 100% { 
+        transform: scale(0);
+    }
+    40% { 
+        transform: scale(1);
+    }
+}
+
+/* Auto-resize textarea */
+textarea {
+    resize: none;
+    overflow-y: auto;
+    height: 38px;
+    max-height: 38px;
+    line-height: 1.5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* Message form styling */
+#message-form {
+    display: flex;
+    align-items: flex-start; /* Aligns items to top */
+    gap: 8px;
+}
+
+#message-form button {
+    width: 42px !important;
+    height: 42px !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Prevents button from growing or shrinking */
+}
+
+/* Connection status styles */
+.connection-status {
+    transition: all 0.3s ease;
+}
+
+.connection-status.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.connection-status.connecting {
+    background: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.connection-status.connected {
+    background: #d1fae5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 20px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 85, 99, 0.5);
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Animation for new messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Active navigation link styles */
+.navbar .nav-link.active {
+    background-image: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  /* Reduce padding on hero section for mobile */
+  #scrollspyHero {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Make hero text smaller on mobile */
+  #scrollspyHero h1 {
+    font-size: 2rem !important;
+  }
+  
+  #scrollspyHero .display-2 {
+    font-size: 1.8rem !important;
+  }
+  
+  #scrollspyHero p {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Adjust button sizing for mobile */
+  #scrollspyHero .btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Reduce vertical spacing between elements */
+  #scrollspyHero .row > div {
+    margin-bottom: 0.5rem;
+  }
+}

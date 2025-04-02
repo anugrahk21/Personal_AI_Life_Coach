@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Ally - Your Personal Life Coach</title>
+  <link href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#bsb-tpl-navbar" data-bs-smooth-scroll="true" tabindex="0" class="bg-gradient-to-br from-blue-50 to-purple-100">
+  <!-- Header -->
+  <header id="header" class="sticky-top bsb-tpl-header-sticky">
+    <!-- Navbar -->
+    <nav id="scrollspyNav" class="navbar navbar-expand-lg bg-white shadow-sm" data-bsb-sticky-target="#header">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <h2 class="text-gradient fw-bold m-0">AI Ally</h2>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-center w-100" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="bsb-tpl-navbar" class="navbar-nav justify-content-end flex-grow-1 text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link active" href="#scrollspyNav" aria-current="page" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyServices" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyAbout" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyTestimonials" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyPricing" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyBlog" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyContact" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0">
+                <a class="nav-link btn btn-gradient rounded-pill px-4 ms-lg-2 d-inline-block" href="/coachai">Try AI Coach</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="scrollspyHero" class="py-5 py-xl-8 py-xxl-10 bg-gradient-light">
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
+        <div class="col-12 col-lg-6 order-1 order-lg-0">
+          <h1 class="display-3 fw-bolder mb-3">Your Personal <br><span class="text-gradient display-2 fw-bold">AI Life Coach</span> for continuous growth</h1>
+          <p class="fs-4 mb-5">AI Ally provides personalized guidance, motivation, and support to help you achieve your goals and transform your life.</p>
+          <div class="d-grid gap-2 d-sm-flex">
+            <a href="/coachai" class="btn btn-gradient btn-lg rounded-pill px-5 py-3">Start Coaching Now</a>
+            <button type="button" class="btn btn-outline-primary btn-lg rounded-pill px-5 py-3">Learn More</button>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 text-center">
+          <img class="img-fluid floating" loading="lazy" src="/static/assets/img/hero/hero-home.png" alt="AI Life Coach">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Features Section -->
+    <section id="scrollspyServices" class="py-5 py-xl-8">
+      <div class="container mb-5 mb-md-6 mb-xl-10">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7 text-center">
+            <h2 class="display-3 fw-bolder mb-4">Experience the power of <br><span class="text-gradient display-1 fw-bold">AI coaching</span> tailored just for you</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-5 gx-md-4 gy-lg-0 gx-xxl-5 justify-content-center">
+          <div class="col-11 col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <div class="bg-gradient-light rounded-circle p-3 mb-4 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="fas fa-brain fs-3 text-gradient"></i>
+                </div>
+                <h4 class="mb-3">Personalized Guidance</h4>
+                <p class="mb-3 text-secondary">Our AI coach adapts to your unique needs, providing custom advice and strategies based on your personal goals, challenges, and progress.</p>
+                <a href="#!" class="fw-bold text-decoration-none text-gradient">
+                  Learn More
+                  <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-11 col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <div class="bg-gradient-light rounded-circle p-3 mb-4 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="fas fa-comments fs-3 text-gradient"></i>
+                </div>
+                <h4 class="mb-3">24/7 Support</h4>
+                <p class="mb-3 text-secondary">Unlike human coaches, AI Ally is available whenever you need guidance, motivation, or someone to talk to—day or night, weekday or weekend.</p>
+                <a href="#!" class="fw-bold text-decoration-none text-gradient">
+                  Learn More
+                  <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-11 col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <div class="bg-gradient-light rounded-circle p-3 mb-4 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="fas fa-chart-line fs-3 text-gradient"></i>
+                </div>
+                <h4 class="mb-3">Progress Tracking</h4>
+                <p class="mb-3 text-secondary">Track your personal development journey with data-driven insights, milestone celebrations, and personalized progress reports.</p>
+                <a href="#!" class="fw-bold text-decoration-none text-gradient">
+                  Learn More
+                  <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-11 col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <div class="bg-gradient-light rounded-circle p-3 mb-4 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="fas fa-shield-alt fs-3 text-gradient"></i>
+                </div>
+                <h4 class="mb-3">Privacy Focused</h4>
+                <p class="mb-3 text-secondary">Your conversations and personal data are kept secure and private. We prioritize your confidentiality with state-of-the-art security measures.</p>
+                <a href="#!" class="fw-bold text-decoration-none text-gradient">
+                  Learn More
+                  <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="py-5 py-xl-8 bg-gradient-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <h3 class="fs-5 mb-3 text-gradient text-uppercase fw-bold">Start Your Journey Today</h3>
+            <h2 class="display-4 fw-bolder mb-4">Ready to transform your life with AI-powered coaching?</h2>
+            <a href="/coachai" class="btn btn-gradient btn-lg rounded-pill px-5 py-3 mb-0">Begin Your Coaching Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="scrollspyAbout" class="py-5 py-xl-8">
+      <div class="container">
+        <div class="row gy-5 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6">
+            <img class="img-fluid floating" loading="lazy" src="/static/assets/img/about/about-img-1.png" alt="About AI Ally">
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row justify-content-xl-end">
+              <div class="col-12 col-xl-11">
+                <h2 class="display-3 fw-bolder mb-4">Why choose <span class="text-gradient">AI Ally</span> for your personal development?</h2>
+                <p class="fs-4 mb-5">Our AI coaching approach combines cutting-edge technology with proven psychological principles to deliver personalized guidance that evolves with you.</p>
+                <div class="accordion accordion-flush" id="accordionExample">
+                  <div class="accordion-item border-gradient">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Advanced AI Technology
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Our AI model is built on state-of-the-art language processing capabilities, allowing it to understand context, emotions, and nuanced human challenges. It learns from each interaction to provide increasingly personalized support.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-gradient">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Evidence-Based Coaching Methods
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We incorporate techniques from positive psychology, cognitive behavioral therapy, and motivational interviewing to help you overcome obstacles, build new habits, and achieve your goals with proven approaches.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-gradient">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Affordable Accessibility
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Traditional coaching can cost hundreds of dollars per session. AI Ally makes personal development accessible to everyone with flexible pricing options that fit any budget, without compromising on quality guidance.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="container pt-5 pt-xl-8">
+        <div class="row gy-4">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <div class="btn btn-gradient rounded-circle btn-lg mb-3">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h3 class="h1 mb-2">10K+</h3>
+                <p class="fs-5 mb-0 text-secondary">Active Users</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <div class="btn btn-gradient rounded-circle btn-lg mb-3">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="h1 mb-2">500K+</h3>
+                <p class="fs-5 mb-0 text-secondary">Coaching Sessions</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <div class="btn btn-gradient rounded-circle btn-lg mb-3">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <h3 class="h1 mb-2">85%</h3>
+                <p class="fs-5 mb-0 text-secondary">Goal Completion Rate</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body text-center p-4 p-xxl-5">
+                <div class="btn btn-gradient rounded-circle btn-lg mb-3">
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3 class="h1 mb-2">4.8/5</h3>
+                <p class="fs-5 mb-0 text-secondary">User Satisfaction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="scrollspyTestimonials" class="py-5 py-xl-8 bg-gradient-light">
+      <div class="container mb-5 mb-md-6 mb-xl-10">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7 text-center">
+            <h2 class="display-3 fw-bolder mb-4">Our users are experiencing <br><span class="text-gradient display-1 fw-bold">real transformation</span> in their lives</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-4 gy-md-0 gx-xxl-5">
+          <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img class="img-fluid rounded-circle mb-4 border border-3 border-light" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy" src="/static/assets/img/testimonial/testimonial-img-1.jpg" alt="Sarah Johnson">
+                  <figcaption>
+                    <div class="text-warning mb-3">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="fst-italic mb-4">"AI Ally helped me break through my procrastination habits that I've struggled with for years. The daily check-ins and personalized strategies made all the difference. I've accomplished more in 3 months than in the past 2 years!"</blockquote>
+                    <h4 class="mb-2">Anirudh</h4>
+                    <h5 class="fs-6 text-secondary mb-0">Marketing Executive</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img class="img-fluid rounded-circle mb-4 border border-3 border-light" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy" src="/static/assets/img/testimonial/testimonial-img-2.jpg" alt="Michael Rodriguez">
+                  <figcaption>
+                    <div class="text-warning mb-3">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <blockquote class="fst-italic mb-4">"As someone who was skeptical about AI coaching, I'm now completely converted. The insights and feedback feel surprisingly human, and having access to guidance at any time has been game-changing for my mental health journey."</blockquote>
+                    <h4 class="mb-2">Anugrah</h4>
+                    <h5 class="fs-6 text-secondary mb-0">Software Engineer</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 p-xxl-5">
+                <figure>
+                  <img class="img-fluid rounded-circle mb-4 border border-3 border-light" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy" src="/static/assets/img/testimonial/testimonial-img-4.jpg" alt="Jennifer Lee">
+                  <figcaption>
+                    <div class="text-warning mb-3">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="fst-italic mb-4">"AI Ally has been my companion through a major career transition. The goal-setting framework, accountability check-ins, and encouragement when I was struggling helped me stay focused and confident through uncertainty."</blockquote>
+                    <h4 class="mb-2">Shijas</h4>
+                    <h5 class="fs-6 text-secondary mb-0">Career Changer</h5>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="scrollspyPricing" class="py-5 py-xl-8">
+      <div class="container">
+        <div class="row gy-5 gy-lg-0 align-items-center">
+          <div class="col-12 col-lg-4">
+            <h2 class="display-3 fw-bolder mb-4">Simple <span class="text-gradient">Pricing</span> for everyone</h2>
+            <p class="fs-4 mb-4 mb-xl-5">Choose the plan that fits your needs and start your personal growth journey today.</p>
+            <a href="#scrollspyContact" class="btn btn-gradient btn-lg rounded-pill">Contact Us</a>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="row justify-content-xl-end">
+              <div class="col-12 col-xl-11">
+                <div class="row gy-4 gy-md-0 gx-xxl-5">
+                  <div class="col-12 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                      <div class="card-body p-4 p-xxl-5">
+                        <h2 class="h4 mb-2">Basic</h2>
+                        <h4 class="display-3 fw-bold text-gradient mb-0">$9.99</h4>
+                        <p class="text-secondary mb-4">per month</p>
+                        <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item border-0 ps-0">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Basic AI coaching sessions</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Up to 15 coaching sessions/month</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Goal tracking for up to 3 goals</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0">
+                            <i class="fas fa-times text-danger me-2"></i>
+                            <span>Advanced coaching techniques</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0">
+                            <i class="fas fa-times text-danger me-2"></i>
+                            <span>Priority support</span>
+                          </li>
+                        </ul>
+                        <a href="/coachai" class="btn btn-outline-primary btn-lg rounded-pill w-100">Choose Plan</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="card border-0 shadow-lg pt-md-4 pb-md-4 position-relative bg-gradient-light">
+                      <div class="position-absolute top-0 start-50 translate-middle badge bg-gradient text-white px-3 py-2 rounded-pill" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+                        Popular Choice
+                      </div>
+                      <div class="card-body p-4 p-xxl-5">
+                        <h2 class="h4 mb-2">Premium</h2>
+                        <h4 class="display-3 fw-bold text-gradient mb-0">$24.99</h4>
+                        <p class="text-secondary mb-4">per month</p>
+                        <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item border-0 ps-0 bg-transparent">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Unlimited AI coaching sessions</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0 bg-transparent">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Advanced personalization</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0 bg-transparent">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Unlimited goal tracking</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0 bg-transparent">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Advanced coaching techniques</span>
+                          </li>
+                          <li class="list-group-item border-0 ps-0 bg-transparent">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Priority support</span>
+                          </li>
+                        </ul>
+                        <a href="/coachai" class="btn btn-gradient btn-lg rounded-pill w-100">Choose Plan</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="scrollspyBlog" class="py-5 py-xl-8 bg-gradient-light">
+      <div class="container">
+        <div class="row gy-5 gy-lg-0 align-items-center">
+          <div class="col-12 col-lg-4">
+            <h2 class="display-3 fw-bolder mb-4">Our <span class="text-gradient">Blog</span></h2>
+            <p class="fs-4 mb-4 mb-xl-5">Insights, tips, and inspiration for your personal growth journey.</p>
+            <a href="#!" class="btn btn-gradient btn-lg rounded-pill">View All Posts</a>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="row justify-content-xl-end">
+              <div class="col-12 col-xl-11">
+                <div class="row gy-4 gy-xxl-5 gx-xxl-5">
+                  <div class="col-12 col-lg-6">
+                    <article class="card border-0 shadow-sm h-100">
+                      <figure class="rounded overflow-hidden mb-0">
+                        <img class="img-fluid" loading="lazy" src="/static/assets/img/blog/blog-image-1.png" alt="">
+                      </figure>
+                      <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <span class="badge bg-gradient-light text-gradient me-2">Self-Improvement</span>
+                          <small class="text-secondary">March 15, 2025</small>
+                        </div>
+                        <h3 class="h4 mb-3">
+                          <a class="text-decoration-none text-dark stretched-link" href="#!">5 Habits That Will Dramatically Improve Your Focus</a>
+                        </h3>
+                        <p class="text-secondary mb-0">Discover science-backed techniques to enhance concentration and achieve deep focus in a world of constant distractions.</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <article class="card border-0 shadow-sm h-100">
+                      <figure class="rounded overflow-hidden mb-0">
+                        <img class="img-fluid" loading="lazy" src="/static/assets/img/blog/blog-image-2.png" alt="">
+                      </figure>
+                      <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <span class="badge bg-gradient-light text-gradient me-2">AI Coaching</span>
+                          <small class="text-secondary">March 10, 2025</small>
+                        </div>
+                        <h3 class="h4 mb-3">
+                          <a class="text-decoration-none text-dark stretched-link" href="#!">How AI is Revolutionizing Personal Development</a>
+                        </h3>
+                        <p class="text-secondary mb-0">Explore how artificial intelligence is transforming the coaching industry and creating new possibilities for personal growth.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="scrollspyContact" class="py-5 py-xl-8">
+      <div class="container">
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6">
+            <img class="img-fluid floating" loading="lazy" src="/static/assets/img/contact/contact-img-1.png" alt="Contact AI Ally">
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-11">
+                <h2 class="display-3 fw-bold mb-3">Get in touch</h2>
+                <p class="lead fs-4 text-secondary mb-5">Have questions about AI Ally? We're here to help. Reach out to our team through the following channels.</p>
+                <div class="d-flex mb-4">
+                  <div class="me-4 text-gradient">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                  </div>
+                  <div>
+                    <h4 class="mb-3">Address</h4>
+                    <address class="mb-0 text-secondary">8014 Innovation Blvd, Suite 300, Tech City, California, United States</address>
+                  </div>
+                </div>
+                <div class="d-flex mb-4">
+                  <div class="me-4 text-gradient">
+                    <i class="fas fa-phone fa-2x"></i>
+                  </div>
+                  <div>
+                    <h4 class="mb-3">Phone</h4>
+                    <p class="mb-0 text-secondary">(555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div class="me-4 text-gradient">
+                    <i class="fas fa-envelope fa-2x"></i>
+                  </div>
+                  <div>
+                    <h4 class="mb-3">Email</h4>
+                    <p class="mb-0 text-secondary">support@aiallycaoch.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <section class="bg-gradient-light py-4 py-md-5 border-top">
+      <div class="container">
+        <div class="row gy-4 gy-lg-0 justify-content-xl-between">
+          <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <div class="widget">
+              <h2 class="text-gradient fw-bold">AI Ally</h2>
+              <p class="text-secondary">Your Personal AI Life Coach</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <div class="widget">
+              <h4 class="widget-title mb-4">Quick Links</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#scrollspyNav" class="link-secondary text-decoration-none">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#scrollspyServices" class="link-secondary text-decoration-none">Features</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#scrollspyAbout" class="link-secondary text-decoration-none">About</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#scrollspyPricing" class="link-secondary text-decoration-none">Pricing</a>
+                </li>
+                <li class="mb-0">
+                  <a href="#scrollspyContact" class="link-secondary text-decoration-none">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 col-xl-2">
+            <div class="widget">
+              <h4 class="widget-title mb-4">Legal</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#!" class="link-secondary text-decoration-none">Terms of Service</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="link-secondary text-decoration-none">Privacy Policy</a>
+                </li>
+                <li class="mb-0">
+                  <a href="#!" class="link-secondary text-decoration-none">Cookie Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-xl-4">
+            <div class="widget">
+              <h4 class="widget-title mb-4">Subscribe to Our Newsletter</h4>
+              <p class="mb-4 text-secondary">Get the latest tips, updates, and exclusive content delivered to your inbox.</p>
+              <form action="#!">
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Your email" aria-label="Your email" required>
+                  <button class="btn btn-gradient" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="bg-light py-4 border-top">
+      <div class="container">
+        <div class="row gy-4 gy-md-0">
+          <div class="col-xs-12 col-md-7 order-1 order-md-0">
+            <div class="copyright text-center text-md-start">
+              &copy; 2025 AI Ally. All Rights Reserved.
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-5 order-0 order-md-1">
+            <ul class="nav justify-content-center justify-content-md-end">
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#!">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class "nav-item">
+                <a class="nav-link text-secondary" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#!">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript Files -->
+  <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/animations.js"></script>
+  <script src="/static/js/redirects.js"></script>
+</body>
+</html>
