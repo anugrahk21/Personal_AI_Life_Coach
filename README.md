@@ -6,6 +6,22 @@ A virtual companion providing personalized guidance, emotional support, and acti
 
 AI Personal Life Coach leverages artificial intelligence to create a supportive, non-judgmental environment where users can discuss their concerns, set goals, and receive personalized guidance. The system combines therapeutic techniques with practical advice to deliver a holistic coaching experience.
 
+## 📑 Contents
+
+- [AI Model](#-ai-model)
+- [Features](#-features)
+- [Screenshots & Demos](#-screenshots--demos)
+- [Technology Stack](#-technology-stack)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [How It Works](#-how-it-works)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [Future Enhancements](#-future-enhancements)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
+- [Contact](#-contact)
+
 ## 🤖 AI Model
 
 This project uses **Google's Gemini 2.0 Flash** model through the Google Generative AI API. Gemini is a powerful, multimodal AI model that offers:
