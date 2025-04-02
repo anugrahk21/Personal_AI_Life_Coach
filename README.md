@@ -6,6 +6,15 @@ A virtual companion providing personalized guidance, emotional support, and acti
 
 AI Personal Life Coach leverages artificial intelligence to create a supportive, non-judgmental environment where users can discuss their concerns, set goals, and receive personalized guidance. The system combines therapeutic techniques with practical advice to deliver a holistic coaching experience.
 
+## AI Model
+
+This project uses **Google's Gemini 2.0 Flash** model through the Google Generative AI API. Gemini is a powerful, multimodal AI model that offers:
+
+- Advanced natural language understanding
+- Contextual awareness for meaningful conversations
+- Fast response times for real-time coaching
+- Ability to remember conversation context and provide personalized guidance
+
 ## Features
 
 - **Personalized Guidance**: Tailored advice based on your specific situation and goals
@@ -20,14 +29,14 @@ AI Personal Life Coach leverages artificial intelligence to create a supportive,
 
 - **Backend**: Python, Flask
 - **Frontend**: HTML, CSS, JavaScript
-- **AI**: OpenAI APIs
+- **AI**: Google Generative AI (Gemini API)
 - **Deployment**: Local server (with cloud deployment options)
 
 ## Installation
 
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/AI_Personal_Life_Coach.git
+git clone https://github.com/anugrahk21/Personal_AI_Life_Coach.git
 cd AI_Personal_Life_Coach
 ```
 
@@ -36,19 +45,21 @@ cd AI_Personal_Life_Coach
 pip install -r requirements.txt
 ```
 
-3. Set up your OpenAI API key:
+3. Set up your Gemini API key:
    - Create a `.env` file in the root directory
-   - Add your API key: `OPENAI_API_KEY=your_api_key_here`
+   - Add your API key: `GEMINI_API_KEY=your_api_key_here`
+   - You can get an API key from: https://makersuite.google.com/app/apikey
 
 4. Run the application:
 ```
 python app.py
 ```
 
-5. Open your browser and navigate to:
+5. Open your browser and navigate to the URL displayed in your terminal:
 ```
 http://localhost:5000
 ```
+Note: The port may vary depending on your system configuration or if port 5000 is already in use. The application will display the correct URL when it starts.
 
 ## Usage
 
@@ -105,12 +116,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- OpenAI for providing the AI capabilities
+- Google for providing the Gemini AI capabilities
 - Flask team for the web framework
 - Bootstrap for the responsive design components
 
 ## Contact
 
-Your Name - your.email@example.com
+Anugrah K - anugrah.k910@gmail.com
 
-Project Link: [https://github.com/yourusername/AI_Personal_Life_Coach](https://github.com/yourusername/AI_Personal_Life_Coach)
+Project Link: [Click Here](https://github.com/anugrahk21/Personal_AI_Life_Coach)
