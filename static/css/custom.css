@@ -1,27 +1,30 @@
 /* Additional styles to blend with existing css */
 .bsb-tpl-bg-gradient {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #4f46e5, #8b5cf6, #d946ef);
 }
 
 .text-gradient {
-  background-image: linear-gradient(135deg, #3b82f6, #6366f1);
+  background-image: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .btn-gradient {
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   color: white;
+  transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  background: linear-gradient(45deg, #2563eb, #7c3aed, #db2777);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
   color: white;
 }
 
 .bsb-tpl-highlighted-text {
-  background-image: linear-gradient(135deg, #3b82f6, #6366f1);
+  background-image: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -33,19 +36,92 @@
 
 .border-gradient {
   border-bottom: 4px solid;
-  border-image: linear-gradient(135deg, #3b82f6, #6366f1);
+  border-image: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   border-image-slice: 1;
 }
 
 /* Floating animation */
 @keyframes floating {
   0% { transform: translate(0, 0); }
-  25% { transform: translate(15px, -15px); }
   50% { transform: translate(0px, -30px); }
-  75% { transform: translate(-15px, -15px); }
   100% { transform: translate(0, 0); }
 }
 
 .floating {
   animation: floating 5s ease-in-out infinite;
+}
+
+/* Free Trial Modal */
+.free-trial-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Make modal unescapable */
+    pointer-events: all !important;
+    user-select: none;
+}
+
+.free-trial-modal-content {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    animation: modalFadeIn 0.3s ease-out;
+    /* Improved padding for different screen sizes */
+    padding: 20px;
+}
+
+/* More distinct gradient for modal heading */
+.free-trial-modal h1.text-gradient {
+    background-image: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Button gradient in modal */
+.free-trial-modal .btn-gradient {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.free-trial-modal .btn-gradient:hover {
+    background: linear-gradient(45deg, #2563eb, #7c3aed, #db2777);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styles for modal */
+@media (max-width: 576px) {
+    .free-trial-modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prevent scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+    touch-action: none;
+    position: relative;
+}
+
+/* Override any other elements that might interfere with modal */
+.free-trial-modal * {
+    pointer-events: auto !important;
 }

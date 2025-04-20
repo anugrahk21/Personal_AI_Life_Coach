@@ -51,15 +51,18 @@
     font-size: 0.8rem;
     font-weight: 600;
     color: white;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(45deg, #4f46e5, #8b5cf6, #d946ef);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
 }
 
 .user-message-wrapper .profile-circle {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    background: linear-gradient(45deg, #2563eb, #4f46e5, #7c3aed);
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
 }
 
 .coach-message-wrapper .profile-circle {
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    background: linear-gradient(45deg, #3b82f6, #6366f1, #8b5cf6);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
 
 /* Chat bubbles for messages */
@@ -266,6 +269,21 @@ html {
     height: 2px;
     background: linear-gradient(135deg, #3b82f6, #6366f1);
     opacity: 0.8;
+}
+
+/* Consistent header styling for all pages */
+#scrollspyNav.navbar {
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+    height: 70px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+}
+
+#scrollspyNav .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* Responsive adjustments */

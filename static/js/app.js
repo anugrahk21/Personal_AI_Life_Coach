@@ -7,16 +7,113 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingIndicator = document.getElementById('typing-indicator');
     const connectionStatus = document.getElementById('connection-status');
     const themeToggle = document.getElementById('theme-toggle'); // This might not exist on all pages
+    const freeTrialModal = document.getElementById('free-trial-modal');
+    const signupButton = document.getElementById('signup-button');
+    const resetDemoButton = document.getElementById('reset-demo');
     
     // State
     let conversationHistory = [];
     let isWaitingForResponse = false;
+    let userMessageCount = 0; // Track number of user messages
+    const MESSAGE_LIMIT = 10; // Message limit for free trial
+    
+    // Simple function to check online status
+    function checkOnlineStatus() {
+        return navigator.onLine === true;
+    }
+    
+    // Check local storage for existing message count
+    if (localStorage.getItem('userMessageCount')) {
+        userMessageCount = parseInt(localStorage.getItem('userMessageCount'));
+    }
+    
+    // Reset demo functionality
+    if (resetDemoButton) {
+        resetDemoButton.addEventListener('click', () => {
+            // Reset message count
+            userMessageCount = 0;
+            localStorage.setItem('userMessageCount', userMessageCount);
+            
+            // Hide modal if it's visible
+            if (freeTrialModal && !freeTrialModal.classList.contains('d-none')) {
+                freeTrialModal.classList.add('d-none');
+                document.body.classList.remove('modal-open');
+            }
+            
+            // Re-enable input if disabled
+            if (userInput) userInput.disabled = false;
+            if (messageForm) {
+                const submitButton = messageForm.querySelector('button');
+                if (submitButton) submitButton.disabled = false;
+            }
+            
+            // Add reset confirmation message and remove after 5 seconds
+            const msgElem = addMessage("Demo has been reset. You can now send 10 more messages.", "coach");
+            setTimeout(() => {
+                if (msgElem && msgElem.parentNode) {
+                    msgElem.style.transition = "opacity 0.5s";
+                    msgElem.style.opacity = "0";
+                    setTimeout(() => {
+                        if (msgElem.parentNode) msgElem.parentNode.removeChild(msgElem);
+                    }, 500);
+                }
+            }, 5000);
+        });
+    }
+    
+    // Free trial modal functions
+    function showFreeTrialModal() {
+        freeTrialModal.classList.remove('d-none');
+        document.body.classList.add('modal-open');
+        
+        // Disable textarea and submit button
+        if (userInput) userInput.disabled = true;
+        if (messageForm) {
+            const submitButton = messageForm.querySelector('button');
+            if (submitButton) submitButton.disabled = true;
+        }
+    }
+    
+    // Add signup button event listener
+    if (signupButton) {
+        signupButton.addEventListener('click', () => {
+            // Here you would redirect to your signup page
+            window.location.href = '/signup';
+        });
+    }
     
     // Check for saved theme preference
     if (localStorage.getItem('theme') === 'dark' || 
         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
     }
+    
+    // Add online/offline event listeners to update status in real-time
+    window.addEventListener('online', () => {
+        console.log('Browser reports online status');
+        if (connectionStatus) {
+            updateConnectionStatus('connected', 'Connected to chat service');
+        }
+        // Re-enable chat interface if it was disabled
+        if (userInput) userInput.disabled = false;
+        if (messageForm) {
+            const submitButton = messageForm.querySelector('button');
+            if (submitButton) submitButton.disabled = false;
+        }
+    });
+    
+    window.addEventListener('offline', () => {
+        console.log('Browser reports offline status');
+        if (connectionStatus) {
+            updateConnectionStatus('error', 'You are offline. Please check your internet connection.');
+        }
+        // Disable chat interface when offline
+        if (userInput) userInput.disabled = true;
+        if (messageForm) {
+            const submitButton = messageForm.querySelector('button');
+            if (submitButton) submitButton.disabled = true;
+        }
+    });
     
     // Initialize the chat with greeting - only run on pages with chat functionality
     function initializeChat() {
@@ -27,6 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         console.log("Initializing chat with greeting...");
+        
+        // First check if online before attempting to connect
+        if (!checkOnlineStatus()) {
+            console.log("Browser reports offline");
+            if (connectionStatus) {
+                updateConnectionStatus('error', 'You are offline. Please check your internet connection.');
+            }
+            if (typingIndicator) typingIndicator.classList.add('d-none');
+            return;
+        }
         
         // Show typing indicator immediately
         typingIndicator.classList.remove('d-none');
@@ -66,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error fetching greeting:', error);
                 if (typingIndicator) typingIndicator.classList.add('d-none');
                 if (connectionStatus) {
-                    updateConnectionStatus('error', 'Failed to connect to chat service. Please refresh the page.');
+                    updateConnectionStatus('error', 'Failed to connect to chat service. Please check your internet connection.');
                 }
             });
     }
@@ -78,6 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = userInput.value.trim();
             
             if (message && !isWaitingForResponse) {
+                // Check if user has reached message limit
+                if (userMessageCount >= MESSAGE_LIMIT) {
+                    showFreeTrialModal();
+                    return;
+                }
+                
                 sendMessage(message);
                 userInput.value = '';
                 resizeTextarea(userInput);
@@ -89,6 +202,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function sendMessage(message) {
         // Add user message to chat
         addMessage(message, 'user');
+        
+        // Increment user message count
+        userMessageCount++;
+        localStorage.setItem('userMessageCount', userMessageCount);
+        
+        // Check if this message triggered the limit
+        if (userMessageCount === MESSAGE_LIMIT) {
+            setTimeout(() => {
+                showFreeTrialModal();
+            }, 1000); // Show modal after a slight delay
+        }
+        
+        // Check online status before attempting to send
+        if (!checkOnlineStatus()) {
+            hideTypingIndicator();
+            addMessage("I can't reach the server right now. Please check your internet connection and try again.", 'coach');
+            isWaitingForResponse = false;
+            updateConnectionStatus('error', 'You are offline. Please check your internet connection.');
+            return;
+        }
         
         // Set typing indicator
         isWaitingForResponse = true;
@@ -116,6 +249,9 @@ document.addEventListener('DOMContentLoaded', () => {
             hideTypingIndicator();
             addMessage('I seem to be having trouble connecting right now. Could you try again in a moment?', 'coach');
             isWaitingForResponse = false;
+            
+            // Update connection status to error if there was a problem
+            updateConnectionStatus('error', 'Connection issue. Please check your internet connection.');
         });
     }
     
@@ -164,10 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Create a wrapper with scroll-bottom class if needed
+        let elementToAppend = messageWrapper;
         if (shouldScrollToBottom()) {
             const scrollWrapper = document.createElement('div');
             scrollWrapper.classList.add('scroll-bottom');
             scrollWrapper.appendChild(messageWrapper);
+            elementToAppend = scrollWrapper;
             chatMessages.appendChild(scrollWrapper);
         } else {
             chatMessages.appendChild(messageWrapper);
@@ -180,6 +318,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sender === 'user' || sender === 'coach') {
             conversationHistory.push({ sender, text });
         }
+        
+        return elementToAppend;
     }
     
     // Check if should auto-scroll to bottom (when user is already at bottom)

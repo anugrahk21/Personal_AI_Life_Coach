@@ -12,17 +12,32 @@
 <body class="bg-gradient-light min-h-screen d-flex flex-column" data-bs-spy="scroll" data-bs-target="#bsb-tpl-navbar" data-bs-smooth-scroll="true" tabindex="0">
     <!-- Header -->
     <header id="header" class="sticky-top bsb-tpl-header-sticky">
-        <nav id="scrollspyNav" class="navbar navbar-expand-lg bg-white shadow-sm py-2" data-bsb-sticky-target="#header">
+        <!-- Navbar -->
+        <nav id="scrollspyNav" class="navbar navbar-expand-lg bg-white shadow-sm" data-bsb-sticky-target="#header">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <h2 class="text-gradient fw-bold m-0 fs-4">AI Ally</h2>
+                    <h2 class="text-gradient fw-bold m-0">AI Ally</h2>
                 </a>
-                <a href="/" class="btn btn-gradient rounded-pill px-3 py-1">
-                    <i class="fas fa-arrow-left me-2"></i>Back to Home
-                </a>
+                <div class="d-flex">
+                    <a href="/" class="btn btn-gradient rounded-pill px-4 ms-lg-2">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Home
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
+
+    <!-- Free Trial Limit Modal -->
+    <div id="free-trial-modal" class="free-trial-modal d-none">
+        <div class="free-trial-modal-content text-center">
+            <div class="modal-body p-4 p-md-5">
+                <h1 class="h2 text-gradient fw-bold mb-3">🚀 You've Reached Your Free Trial Limit</h1>
+                <p class="mb-4">You've sent 10 messages—your free trial's up. Sign up now to keep the conversation going!</p>
+                <button id="signup-button" class="btn btn-gradient btn-lg px-4 py-2 mb-3 w-100">Sign Up & Unlock Unlimited Coaching</button>
+                <small class="text-secondary d-block">We'll never spam you. Cancel anytime.</small>
+            </div>
+        </div>
+    </div>
 
     <!-- Compact Hero Section -->
     <section class="py-2 bg-gradient-light">
@@ -94,5 +109,10 @@
     <script src="/static/js/app.js"></script>
     <script src="/static/js/animations.js"></script>
     <script src="/static/js/redirects.js"></script>
+    
+    <!-- Demo Reset Button (hidden in production) -->
+    <div style="position: fixed; bottom: 10px; left: 10px; z-index: 1000; opacity: 0.5;">
+        <button id="reset-demo" class="btn btn-sm btn-light border">Reset Demo</button>
+    </div>
 </body>
 </html>
