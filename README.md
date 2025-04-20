@@ -40,6 +40,8 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 - **Actionable Insights** 💡: Practical steps and strategies you can implement immediately
 - **24/7 Availability** ⏰: Support whenever you need it, day or night
 - **Private & Secure** 🔒: Your conversations remain confidential
+- **Network Status Monitor** 🔄: Real-time connection monitoring for improved reliability
+- **Consistent UI Experience** 🖥️: Standardized header design across all pages
 
 ## 📸 Screenshots & Demos
 
@@ -159,13 +161,14 @@ The custom prompt engineering ensures the Gemini model behaves consistently as a
 AI_Personal_Life_Coach/
 ├── app.py                # Main Flask application
 ├── coach.py              # TherapistCoach implementation
+├── README.md             # Project documentation
 ├── requirements.txt      # Python dependencies
+├── __pycache__/          # Compiled Python files
 ├── static/               # Static assets
 │   ├── assets/           # Images, videos and resources
 │   │   ├── favicon/      # Favicon files
 │   │   ├── img/          # Image resources and screenshots
 │   │   └── videos/       # Demo videos
-│   ├── controller/       # JavaScript controllers
 │   ├── css/              # Stylesheets
 │   └── js/               # JavaScript files
 └── templates/            # HTML templates
