@@ -114,8 +114,8 @@ class TherapistCoach:
                     self.motivation_counter = 0
                 
             except Exception as e:
-                # If there's an error, provide a graceful fallback
-                response_text = f"I notice there was a momentary pause in our connection. Could you share a bit more about what you're feeling right now? I believe in your ability to articulate your thoughts, and I'm here to listen. (Error: {str(e)})"
+                # Provide a clear error message without asking the user to share more
+                response_text = f"I'm sorry, but there was an error connecting to the AI service. Please check your API key configuration. (Error: {str(e)})"
         
         # Add the exchange to conversation history
         self.conversation_history.append({"user": user_input, "coach": response_text})

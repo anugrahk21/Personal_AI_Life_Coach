@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-ally
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+    plan: free
