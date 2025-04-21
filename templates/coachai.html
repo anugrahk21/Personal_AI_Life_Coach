@@ -31,11 +31,17 @@
     <!-- Free Trial Limit Modal -->
     <div id="free-trial-modal" class="free-trial-modal d-none">
         <div class="free-trial-modal-content text-center">
-            <div class="modal-body p-4 p-md-5">
+            <div class="modal-body p-4 pb-1 p-md-5 pb-md-2">
                 <h1 class="h2 text-gradient fw-bold mb-3">🚀 You've Reached Your Free Trial Limit</h1>
                 <p class="mb-4">You've sent 10 messages—your free trial's up. Sign up now to keep the conversation going!</p>
                 <button id="signup-button" class="btn btn-gradient btn-lg px-4 py-2 mb-3 w-100">Sign Up & Unlock Unlimited Coaching</button>
-                <small class="text-secondary d-block">We'll never spam you. Cancel anytime.</small>
+                <small class="text-secondary d-block mb-0">We'll never spam you. Cancel anytime.</small>
+                <!-- Hidden developer reset button - nearly invisible but clickable during development -->
+                <div class="mt-1 pt-1 border-top mb-0">
+                    <button id="dev-reset-button" class="btn btn-sm p-0" style="opacity: 0.1; font-size: 8px; color: #8a6ea5; line-height: 1; height: 10px;">
+                        dev reset
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -102,6 +108,13 @@
                 
             </div>
         </div>
+        
+        <!-- Demo Reset Button (positioned below chat section) -->
+        <div class="row mt-3 mb-4">
+            <div class="col-12 text-center">
+                <button id="reset-demo" class="btn btn-sm btn-light border" style="opacity: 0.5;">Reset Demo</button>
+            </div>
+        </div>
     </div>
 
     <!-- Javascript Files -->
@@ -110,10 +123,5 @@
     <script src="/static/js/app.js"></script>
     <script src="/static/js/animations.js"></script>
     <script src="/static/js/redirects.js"></script>
-    
-    <!-- Demo Reset Button (hidden in production) -->
-    <div style="position: fixed; bottom: 10px; left: 10px; z-index: 1000; opacity: 0.5;">
-        <button id="reset-demo" class="btn btn-sm btn-light border">Reset Demo</button>
-    </div>
 </body>
 </html>

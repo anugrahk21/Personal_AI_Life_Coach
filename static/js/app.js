@@ -43,9 +43,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return text;
     }
     
-    // Check local storage for existing message count
+    // Get stored message count to maintain limit across page refreshes
     if (localStorage.getItem('userMessageCount')) {
         userMessageCount = parseInt(localStorage.getItem('userMessageCount'));
+        
+        // If the limit was already reached, show the modal after a short delay
+        if (userMessageCount >= MESSAGE_LIMIT) {
+            setTimeout(() => {
+                showFreeTrialModal();
+            }, 1000);
+        }
+    }
+    
+    // Hidden developer reset button in the modal (for development purposes only)
+    const devResetButton = document.getElementById('dev-reset-button');
+    if (devResetButton) {
+        devResetButton.addEventListener('click', () => {
+            // Reset message count
+            userMessageCount = 0;
+            localStorage.setItem('userMessageCount', userMessageCount);
+            
+            // Hide modal
+            if (freeTrialModal) {
+                freeTrialModal.classList.add('d-none');
+                document.body.classList.remove('modal-open');
+            }
+            
+            // Re-enable input
+            if (userInput) userInput.disabled = false;
+            if (messageForm) {
+                const submitButton = messageForm.querySelector('button');
+                if (submitButton) submitButton.disabled = false;
+            }
+            
+            // Add a subtle confirmation that's only visible to developers
+            console.log('Developer reset triggered - message counter reset to 0');
+        });
     }
     
     // Reset demo functionality
@@ -68,17 +101,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (submitButton) submitButton.disabled = false;
             }
             
-            // Add reset confirmation message and remove after 5 seconds
-            const msgElem = addMessage("Demo has been reset. You can now send 10 more messages.", "coach");
-            setTimeout(() => {
-                if (msgElem && msgElem.parentNode) {
-                    msgElem.style.transition = "opacity 0.5s";
-                    msgElem.style.opacity = "0";
-                    setTimeout(() => {
-                        if (msgElem.parentNode) msgElem.parentNode.removeChild(msgElem);
-                    }, 500);
+            // Reset only the message counter on server (not the entire session)
+            fetch('/api/reset_counter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 }
-            }, 5000);
+            })
+            .then(response => response.json())
+            .then(() => {
+                // Add reset confirmation message and remove after 5 seconds
+                const msgElem = addMessage("Demo has been reset. You can now send 10 more messages while continuing our conversation.", "coach");
+                setTimeout(() => {
+                    if (msgElem && msgElem.parentNode) {
+                        msgElem.style.transition = "opacity 0.5s";
+                        msgElem.style.opacity = "0";
+                        setTimeout(() => {
+                            if (msgElem.parentNode) msgElem.parentNode.removeChild(msgElem);
+                        }, 500);
+                    }
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Error resetting counter:', error);
+            });
         });
     }
     

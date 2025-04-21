@@ -77,7 +77,13 @@
     max-width: 500px;
     animation: modalFadeIn 0.3s ease-out;
     /* Improved padding for different screen sizes */
-    padding: 20px;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Remove extra padding from modal body */
+.free-trial-modal-content .modal-body {
+    padding-bottom: 0.5rem !important;
 }
 
 /* More distinct gradient for modal heading */
