@@ -22,6 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return navigator.onLine === true;
     }
     
+    // Simple markdown parser function
+    function parseMarkdown(text) {
+        // Handle bold text
+        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // Handle italic text
+        text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        
+        // Handle bullet points
+        text = text.replace(/^\* (.+)$/gm, '<li>$1</li>');
+        text = text.replace(/<li>(.+?)<\/li>/g, '<ul><li>$1</li></ul>');
+        
+        // Handle multiple consecutive <ul> elements
+        text = text.replace(/<\/ul>\s*<ul>/g, '');
+        
+        // Handle line breaks
+        text = text.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+        
+        return text;
+    }
+    
     // Check local storage for existing message count
     if (localStorage.getItem('userMessageCount')) {
         userMessageCount = parseInt(localStorage.getItem('userMessageCount'));
@@ -275,10 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message', `${sender}-message`);
         
-        // Add message text - with proper formatting for line breaks
+        // Add message text - with proper formatting
         if (sender === 'coach') {
-            // Replace newlines with <br> tags for proper formatting
-            const formattedText = text.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+            // Parse markdown and format text
+            const formattedText = parseMarkdown(text);
             messageDiv.innerHTML = formattedText;
         } else {
             messageDiv.textContent = text;
