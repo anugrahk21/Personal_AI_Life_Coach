@@ -8,8 +8,11 @@ AI Personal Life Coach leverages artificial intelligence to create a supportive,
 
 ## 🌐 Live Demo
 
-Experience AI Ally in action:
-[https://personal-ai-ally.onrender.com](https://personal-ai-ally.onrender.com)
+<div align="center">
+  <a href="https://personal-ai-ally.onrender.com" target="_blank">
+    <img src="https://img.shields.io/badge/Try%20AI%20Ally-Live%20Demo-brightgreen?style=for-the-badge&logo=render" alt="Live Demo Button">
+  </a>
+</div>
 
 ## 📑 Contents
 
