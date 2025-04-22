@@ -6,6 +6,11 @@ A virtual companion providing personalized guidance, emotional support, and acti
 
 AI Personal Life Coach leverages artificial intelligence to create a supportive, non-judgmental environment where users can discuss their concerns, set goals, and receive personalized guidance. The system combines therapeutic techniques with practical advice to deliver a holistic coaching experience.
 
+## 🌐 Live Demo
+
+Experience AI Ally in action:
+[https://personal-ai-ally.onrender.com](https://personal-ai-ally.onrender.com)
+
 ## 📑 Contents
 
 - [AI Model](#-ai-model)
@@ -42,6 +47,7 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 - **Private & Secure** 🔒: Your conversations remain confidential
 - **Network Status Monitor** 🔄: Real-time connection monitoring for improved reliability
 - **Consistent UI Experience** 🖥️: Standardized header design across all pages
+- **Smooth In-Page Navigation** 🔄: Enhanced user experience with anchor-based navigation
 
 ## 📸 Screenshots & Demos
 
@@ -78,7 +84,7 @@ This project uses **Google's Gemini 2.0 Flash** model through the Google Generat
 - **Backend**: Python, Flask
 - **Frontend**: HTML, CSS, JavaScript
 - **AI**: Google Generative AI (Gemini API)
-- **Deployment**: Local server (with cloud deployment options)
+- **Deployment**: Render.com cloud platform
 
 ## 🚀 Installation
 
@@ -163,6 +169,8 @@ AI_Personal_Life_Coach/
 ├── coach.py              # TherapistCoach implementation
 ├── README.md             # Project documentation
 ├── requirements.txt      # Python dependencies
+├── runtime.txt           # Python runtime specification for deployment
+├── render.yaml           # Configuration for Render.com deployment
 ├── __pycache__/          # Compiled Python files
 ├── static/               # Static assets
 │   ├── assets/           # Images, videos and resources
@@ -202,10 +210,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Google for providing the Gemini AI capabilities
 - Flask team for the web framework
-- HTML5, CSS3, and JavaScript for frontend development
+- HTML5, CSS3, JavaScript for frontend development
+- [Atmosyn](https://atmosyn.com) for web development support
 
 ## 📬 Contact
 
 Anugrah K - anugrah.k910@gmail.com
 
-Project Link: [Click Here](https://github.com/anugrahk21/Personal_AI_Life_Coach)
+Project Link: [GitHub Repository](https://github.com/anugrahk21/Personal_AI_Life_Coach)
+
+Live Demo: [https://personal-ai-ally.onrender.com](https://personal-ai-ally.onrender.com)
